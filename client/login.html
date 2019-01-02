@@ -1,0 +1,16 @@
+<template name="login">
+    <div class="container-fluid">
+        {{>loginButtons}}
+
+        {{#if currentUser}}
+        <ul class="list-group">  
+            {{#if admin}}
+                <li class="list-group-item"><a href="/campanas" class="btn btn-success"> Campañas</a></li>
+            {{/if}}
+            <li class="list-group-item"><a href="/chats" class="btn btn-success"> Chat</a></li>
+        </ul>                        
+        {{/if}}
+    </div>
+
+
+</template>

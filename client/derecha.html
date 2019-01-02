@@ -1,0 +1,101 @@
+<template name="derecha">
+<div class="col-md-3"><!--chat_sidebar-->
+        <div class="row">            
+            
+        
+    <div>        
+        {{>loginButtons}}                     
+    </div>
+    
+    <div class="dropdown all_conversation">
+        <button>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            Chats previos            
+        </button>        
+    </div>
+
+    <div class="member_list" style="height:40vh ! important;">
+        <ul class="list-unstyled">
+            
+            {{>lista_conversaciones_pasadas}}
+                                                                    
+        </ul>
+    </div>
+
+    <div>
+        {{#with el_chat}}
+        <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                            </span>Datos</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Nombre: {{datos.nombre}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Email: {{datos.email}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Campaña: {{cam datos.idcampana}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Teléfono: {{datos.tel}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Matricula: {{datos.matricula}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                            </span>Ubicación</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>País: {{datos.ubicacion.pais}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>Ciudad: {{datos.ubicacion.ciudad}}
+                                    </td>
+                                </tr>                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                                
+            </div>
+            {{/with}}
+    </div>
+    
+
+</div>
+    </div>
+</template>

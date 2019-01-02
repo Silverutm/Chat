@@ -1,0 +1,32 @@
+<template name="area_mensajes">
+<div class="chat_area" id='scroller'>
+    <ul class="list-unstyled">
+    {{#each mensajes}}
+        <li class="ChatLog__entry {{mio usuario}} js-privado">                        
+            {{#if privado}}
+                <p class="ChatLog__message" style="border-top: 1px solid #07f; border-bottom: 1px solid #07f; background-color: #07f;border-left-color: #07f; color: #fff">
+            
+                {{#if link}}
+                    <b><a target="_blank" href="{{texto}}">Link</a> </b>
+                {{else}}
+                    <b>{{texto}}</b>
+                {{/if}}
+            </p>
+
+            {{else}}
+                <p class="ChatLog__message">
+                    {{#if link}}
+                        <b><a target="_blank" href="{{texto}}">Click aquí</a> </b>
+                    {{else}}
+                        <b>{{texto}}</b>
+                    {{/if}}
+                </p>
+            {{/if}}
+            <time><sub>{{conv fecha}}</sub></time>
+        </li>
+    {{/each}}
+
+    </ul>
+</div>
+</template>
+

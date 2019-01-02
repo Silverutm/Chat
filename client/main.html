@@ -1,0 +1,30 @@
+<head>  
+    <title>chatUTEL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+</head> 
+
+<template name="main">                
+    {{>yield "sidebar"}}	 		 
+    
+    {{>yield "extra"}}
+    <div class="col-{{col}} {{message_section}}">
+		<div class="row">            
+            {{>yield "center"}}
+		</div>
+    </div> <!--message_section-->    
+        
+    {{>yield "rightbar"}}
+</template>
+
+
+<template name="vacia">
+</template>
+
+
+<template name="no_chat">                    
+    {{>yield "extra"}}
+</template>
+
+
+<template name="vacia">
+</template>

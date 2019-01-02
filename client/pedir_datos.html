@@ -1,0 +1,34 @@
+<template name="pedir_datos">
+    <div class="container">
+        <img style="height: 50px;width: 50px;" src="/logo.png">
+        <p>Bienvenido a nuestro chat UTEL</p><p> Llena los campos y en breve te atenderá un especialista</p>
+        <form class="js-duda">
+            <div class="form-group">
+                <label for="usr">Nombre *</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <input class="js-checar" type="checkbox" name="alumno" id="alumno" > Soy alumnno
+            </div>
+            {{#if soy_alumno}}
+                <div class="form-group">
+                    <label for="usr">Matricula *</label>
+                    <input type="tel" class="form-control" id="matricula" name="matricula" required>                    
+                </div>
+            {{else}}
+                <div class="form-group">
+                    <label for="usr">Email *</label>
+                    <input type="email" class="form-control" id="mail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="usr">Teléfono</label>
+                    <input type="tel" class="form-control" id="tel" name="tel">                    
+                </div>
+                {{>lista_campanas}}    
+            {{/if}}
+        
+            <button type="submit" class="btn btn-success">Chatear</button>
+           
+        </form>
+    </div>
+</template>

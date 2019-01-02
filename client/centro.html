@@ -1,0 +1,42 @@
+<template name="centro">
+
+    <div class="new_message_head">
+        <div class="pull-left">
+            <span class="chat-img">
+                <img src="/logo.png" alt="Utel">
+            </span>
+            {{#unless falso}}
+                <button class="js-transferir"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Transferir</button>
+                <div class="form-group pull-right">
+                    <input class="js-privado" type="checkbox" name="privado" id="privado" value="." > Privado
+                </div>
+                <div class="form-group pull-right">
+                    <input class="js-link" type="checkbox" name="link" id="link" value="." > Link
+                </div>
+            {{else}}
+                <button><i class="fa fa-plus-square-o" aria-hidden="true"></i>Te atiende {{asesor}}</button>
+            {{/unless}}
+        </div>
+        <div class="pull-right">
+            {{#if idchat}}
+                <a href="#" class="btn btn-primary js-finalizar">Finalizar</a> 
+            {{/if}}
+        </div>
+    </div>
+    
+    
+                        
+    {{>area_mensajes}}            
+
+    
+        
+    <div class="message_write">        
+        <div class="col-xs-10">
+            <textarea id='texto' class="form-control js-enviar-mensaje-input" placeholder="Escribe tu mensaje" autofocus maxlength="300"></textarea>
+        </div>
+        <div class="col-xs-2">                        
+            <a href="#" class="pull-right btn btn-success js-enviar-mensaje"><span class="glyphicon glyphicon-send"></span></a>
+        </div>                
+    </div>         
+
+</template>

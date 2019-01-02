@@ -1,0 +1,37 @@
+<template name="sidebar">
+    <div class="col-md-3"><!--chat_sidebar-->
+        <div class="row">            
+            
+        
+
+
+    <div id="custom-search-input">
+        <div class="input-group col-md-12">
+            <input type="text" class="search-query form-control" placeholder="Conversación próximamente" />
+            <button class="btn btn-danger" type="button">
+                <span class=" glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="all_conversation">
+        <div class="row">
+            <div class="col-sm-6">
+                <button class="btn btn-sucess js-lista-publico">Publico</button>        
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-sucess js-lista-interno">Interno</button>        
+            </div>
+        </div>
+    </div>
+
+    <div class="member_list">
+        <ul class="list-unstyled">
+            
+            {{>lista_conversaciones}}
+                                                                    
+        </ul>
+    </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,32 @@
+<template name="campanas">
+    <div class="container">
+    {{#if Template.subscriptionsReady}}
+        <h1>Lista de campañas</h1>
+        <input id="nueva_campana" type="text" name="nueva_campana" value="" placeholder="Nueva Campaña" >
+        <button type="button" class="btn btn-success js-agregar-campana">Agregar</button>
+
+        <h4>Seleccione para agregar asesores</h4>
+        <h6>Click en checkbox para activar/desactivar</h6>
+        <ul id="mylist" class="list-group">
+            {{#each campanas}}            
+            <li id="{{_id}}" class="list-group-item js-seleccionar-campana">                
+                <input class="js-desactivar-campana pull-left" id="{{_id}}" {{checada activa}} type="checkbox" name="campana" >
+                {{nombre}}
+            </li>            
+            {{/each}}
+        </ul>
+
+        <h1>Lista de asesores de {{campana_nombre}}</h1>
+        <input id="nuevo_usuario" type="text" name="nuevo_usuario" value="" placeholder="Agregar Usuario" >
+        <button type="button" class="btn btn-success js-agregar-usuario-camp">Agregar</button>
+
+        <ul id="mylist" class="list-group">
+            {{#each usuarios_campanas}}
+            <li href="#" class="list-group-item">                
+                    <i class="fa fa-lg fa-remove pull-left js-eliminar-usuario-camp" style="color: red;"></i> {{username}}                
+            </li>            
+                {{/each}}
+        </ul>
+    {{/if}}
+    </div>
+</template>
