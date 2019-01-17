@@ -1,5 +1,6 @@
 # Chat
 Chat escrito en MeteorJS y MongoDB
+
 Un chat que permite a una organización atender a sus clientes y contestar sus dudas.
 
 Fue diseñado para una universidad (sin embargo, puede adaptarse a cualquier organización que tenga un chat en línea con sus clientes). 
